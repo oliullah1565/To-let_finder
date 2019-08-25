@@ -1,0 +1,143 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <title>To-let Finder | Home</title>
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="company-name">
+            <p></p>
+        </div>
+        <div id="site-name">
+            <p> To-let Finder </p>
+        </div>
+        <div id="nav">
+            <ul>
+                <li id="post_btn"><a href="createpost.html">Create Post</a></li>
+                <li id="profile_btn"><a href="profileUser.html">Profile</a></li>
+                <li id="logout_btn"><a href="logout.php">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="jumbotron-fluid" id="body-content">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="body_change">
+						<div class="row">
+								<div class="col-md-1"></div>
+								<div class="col-md-10" style="margin-top:20px;">
+									
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-md-1"></div>
+												<div class="col-md-10">
+													<h4>Your Profile</h4>
+													<hr class="hr_white">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-1"></div>
+												<div class="col-md-10">
+													<form>
+														<div class="form-group row">
+															<label for="name_user" class="col-3 col-form-label">Name:</label>
+															<label id="name_user" class="col-9 col-form-label">Null</label>
+														</div>
+														<div class="form-group row">
+															<label for="email_user" class="col-3 col-form-label">Email:</label>
+															<label id="email_user" class="col-9 col-form-label">null</label>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						
+							<div class="row">
+								<div class="col-md-1"></div>
+								<div class="col-md-10" style="margin-top:20px;">
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-md-1"></div>
+												<div class="col-md-10">
+													<h3>Posts</h3>
+												</div>
+						
+											</div>
+											<hr class="hr_white">
+						
+											<div class="jumbotron-fluid">
+												<div id="posts_load">	  
+												
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+						
+								<div class="col-md-1"></div>
+							</div>
+						</div>        
+                </div>
+            </div>
+        </div>
+        <span class="text text-danger" id="error"></span>
+    </div>
+</body>
+
+</html>
+
+
+
+
+	
+
+<script>
+	$.ajax({
+		url: 'profileUser.php',
+		method: 'get',
+
+		success: function (mgs) {
+			mgs = JSON.parse(mgs);
+			$('#name_user').text(mgs.name);
+			$('#email_user').text(mgs.email);
+		}
+	});
+
+
+	$.ajax({
+		url: 'loadPost_user.php',
+		method: 'get',
+
+		success: function (mgs) {
+			$('#posts_load').html(mgs);
+		}
+	});
+
+</script>
+

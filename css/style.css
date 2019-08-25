@@ -1,0 +1,124 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS',Calibri,'Gill Sans MT','Gill Sans' ,   sans-serif
+}
+
+
+
+body
+{
+    background-color: #1a031ac4;;
+}
+
+body
+#header
+{
+    
+    height:80px;
+    width: 100%;
+    background: #28a745;
+    border-bottom: 3px rebeccapurple solid;
+    color: white;
+}
+body
+#header>#company-name
+{
+    width: 23%;
+    float: left;
+    padding: 10px 0 0 10px;
+    font-weight: bold;
+    font-size: 150%;
+    
+}
+
+body
+#header>#site-name
+{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+body
+#header>#nav
+{
+    width:30%;
+    float: left;
+}
+
+body
+#header>#nav>ul
+{
+    padding: 10px 0px 0px 5px;
+    
+}
+
+body
+#header>#nav>ul :hover
+{
+    cursor:pointer;
+    color: rgb(37, 75, 97);margin-top: 5px;
+    transition: 0.3s;
+    border-bottom: 2px solid rgb(37, 75, 97);
+    font-size:127%;
+}
+body
+#header>#nav>ul>li
+{
+    display: inline;
+    padding: 10px 10px 5px 0; 
+    font-size:120%;
+}
+
+#body-content{
+    position: fixed;
+    height:86%;
+    width: 100%;
+    background-color: #9e9e9e;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+.card {
+    color: #fff;
+    background-color: #32233a;
+}
+.color-green {
+    color: #fff;
+    background-color:#28a745;
+}
+
+/* @media (min-width: 992px) {
+} */
+
+.list-group-item {
+    color: #ffffff;
+    background-color: #32233a;
+}
+.list-group-item-action:hover, .list-group-item-action:focus {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #28a745;
+}
+
+.error
+{
+    color:#dc3545;
+}
+.pagination {
+    margin-bottom: 15px;
+}
+  
+.hr_white{
+    color: #fff;
+    background: #fff;
+}
+.hr_green{
+    color: #28a745;
+    background: #28a745;
+}

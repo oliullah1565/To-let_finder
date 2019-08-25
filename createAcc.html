@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <title>To-let Finder | Home</title>
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="company-name">
+            <p></p>
+        </div>
+        <div id="site-name">
+            <p> To-let Finder </p>
+        </div>
+        <div id="nav">
+            <ul>
+                <li id="home_btn"><a href="home.html">Home</a></li>
+                <li id="createAcc_btn"><a href="createAcc.html">Create Account</a></li>
+                <li id="login_btn"><a href="loginUser.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="jumbotron-fluid" id="body-content">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="body_change">
+                        <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10" style="margin-top:20px;">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-1"></div>
+                                                <div class="col-md-10">
+                                                    <h3>Create Account</h3>
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                        
+                                                <div class="col-md-2"></div>
+                        
+                                                <div class="col-md-8">
+                                                    <form id="create_acc_form" action="createAcc.php" method="POST">
+                                                        <div class="form-group">
+                                                            <label for="title">Name: </label>
+                                                            <input class="form-control" name="name" maxlength="50" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="email">E-mail: </label>
+                                                            <input class="form-control" name="email" maxlength="100" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="password">Password: </label>
+                                                            <input class="form-control" type="password" name="password" maxlength="50" required>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="col-md-4"></div>
+                                                            <input type="submit" id="create_acc_btn" class="col-md-4 btn btn-success">
+                                                        </div>
+                        
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>      
+                </div>
+            </div>
+        </div>
+        <span class="text text-danger" id="error"></span>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+/*    var form = $("#create_acc_form");
+    form.validate();
+
+    $("#create_acc_btn").click(function (event) {
+
+        event.preventDefault();
+        if (form.valid()) {
+            $.ajax({
+                url: './user/createAcc.php',
+                method: 'post',
+                data: $('#create_acc_form').serialize(),
+                success: function (mgs) {
+                    if (mgs == 'Inserted') {
+                        alert("User Added.");
+                        $('#body_change').load('user/profileUser.html');
+
+                        $.ajax({
+                            url: 'home.php',
+                            method: 'get',
+
+                            success: function (mgs) {
+                                if (mgs == 'ok') {
+                                    $('#post_btn').show();
+                                    $('#logout_btn').show();
+                                    $('#profile_btn').show();
+
+                                    $('#createAcc_btn').hide();
+                                    $('#login_btn').hide();
+
+                                }
+                                else if (mgs == 'not ok') {
+                                    $('#post_btn').hide();
+                                    $('#logout_btn').hide();
+                                    $('#profile_btn').hide();
+
+                                    $('#createAcc_btn').show();
+                                    $('#login_btn').show();
+                                }
+                            }
+                        });
+
+                    }
+                    else {
+                        alert(mgs);
+                        $("#error").html(mgs);
+                    }
+
+                }
+            });
+        }
+    })*/
+</script>
